@@ -1,0 +1,134 @@
+.whyus__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.whyus__row + .whyus__row {
+  margin-top: 0.4rem;
+}
+@media only screen and (max-width: 1048px) {
+  .whyus__row + .whyus__row {
+    margin-top: 0;
+  }
+}
+.whyus__row.row-reverse .whyus__list {
+  margin-top: 3rem;
+}
+.whyus__row.row-reverse .whyus__list-item + .whyus__list-item {
+  margin-top: 6rem;
+}
+@media only screen and (max-width: 1048px) {
+  .whyus__row.row-reverse .whyus__list-item + .whyus__list-item {
+    margin-top: 4rem;
+  }
+}
+@media only screen and (max-width: 1048px) {
+  .whyus__row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+.whyus__list {
+  width: 50.2rem;
+  max-width: 100%;
+}
+.whyus__list-item {
+  display: flex;
+  gap: 3rem;
+}
+.whyus__list-item + .whyus__list-item {
+  margin-top: 4rem;
+}
+@media only screen and (max-width: 576px) {
+  .whyus__list-item {
+    display: block;
+  }
+}
+.whyus__list-content {
+  width: 39.3rem;
+  max-width: 100%;
+}
+.whyus__list-img {
+  width: 7.6rem;
+  height: 7.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -0.2rem;
+  background-color: #F1F1F1;
+  border-radius: 50%;
+  min-width: 7.6rem;
+}
+@media only screen and (max-width: 576px) {
+  .whyus__list-img {
+    width: 5.6rem;
+    height: 5.6rem;
+    min-width: 5.6rem;
+    float: left;
+    padding: 1.1rem;
+    margin-right: 3rem;
+  }
+  .whyus__list-img img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+@media only screen and (max-width: 576px) and (max-width: 370px) {
+  .whyus__list-img {
+    margin-right: 0.5rem;
+  }
+}
+.whyus__list-text {
+  margin-top: 2rem;
+}
+.whyus__images {
+  display: flex;
+  align-items: center;
+  width: 50rem;
+  max-width: 100%;
+  gap: 0.4rem;
+}
+@media only screen and (max-width: 576px) {
+  .whyus__images {
+    gap: 0.2rem;
+    justify-content: center;
+  }
+}
+.whyus__images-column {
+  display: flex;
+  flex-direction: column;
+}
+.whyus__images-column img + img {
+  margin-top: 0.4rem;
+}
+@media only screen and (max-width: 576px) {
+  .whyus__images-column img + img {
+    margin-top: 0.2rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .whyus__images-column img {
+    width: 13rem !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .whyus__images-column + img {
+    width: 18rem !important;
+  }
+}
+.whyus__images img {
+  border-radius: 2rem;
+  object-fit: cover;
+}
+@media only screen and (max-width: 576px) {
+  .whyus__images img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,31 @@
+.social__wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+@media only screen and (max-width: 768px) {
+  .social__wrap {
+    flex-direction: column;
+  }
+}
+.social__images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.4rem;
+  margin-right: -10.5rem;
+}
+@media only screen and (max-width: 992px) {
+  .social__images {
+    margin-right: 0;
+  }
+}
+.social__img {
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.social__img img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}

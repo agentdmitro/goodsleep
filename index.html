@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gulp template</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+		integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/libs/swiper.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="Shortcut Icon" type="image/x-icon" href="img/general/favicon.svg" />
+</head>
+
+<body>
+
+	<!-- Add autoHide class to automatically hide the header on scroll -->
+	<header class="header autoHide">
+		<div class="container">
+
+
+			<ul class="header__menu-list">
+				<li class="menu-item"><a href="#">Бестселлери</a></li>
+				<li class="menu-item"><a href="#">Каталог</a></li>
+			</ul>
+
+			<a href="/" class="header__logo"><img src="img/logo.png" alt="logo"></a>
+
+
+			<ul class="header__menu-list">
+				<li class="menu-item"><a href="#">Як обрати?</a></li>
+				<li class="menu-item"><a href="#">Доставка</a></li>
+			</ul>
+
+			<div class="header__user">
+				<a href="#" class="header__cart"><img src="img/general/cart.svg" alt=""></a>
+				<div class="header__burger"><span></span></div>
+			</div>
+
+
+			<nav class="header__menu">
+				<ul class="header__menu-list">
+					<li class="menu-item"><a href="#">Бестселлери</a></li>
+					<li class="menu-item"><a href="#">Каталог</a></li>
+				</ul>
+				<ul class="header__menu-list">
+					<li class="menu-item"><a href="#">Як обрати?</a></li>
+					<li class="menu-item"><a href="#">Доставка</a></li>
+				</ul>
+
+			</nav>
+
+
+		</div>
+	</header>
+
+	<main class="main">
+<section class="banner" id="banner">
+	<div class="container ">
+		<div class="banner__content">
+			<h1 class="banner__title title" data-aos="fade-right" data-aos-delay="50">Солодкий Сон починається з Нас!
+			</h1>
+			<p class="banner__descr text text--big" data-aos="fade-right" data-aos-delay="100">Знайдіть ідеальний матрац
+				для комфортного і здорового сну</p>
+			<a href="#" class="banner__bttn bttn" data-aos="fade-right" data-aos-delay="150">Обрати матрац</a>
+		</div>
+		<div class="banner__img">
+			<img src="img/front/front.png" alt="banner img" data-aos="zoom-out" data-aos-delay="500">
+		</div>
+	</div>
+</section>
+
+<section class="catalog" id="catalog">
+    <div class="container">
+        <h2 class="catalog__title title">Каталог</h2>
+        <div class="catalog__wrap mt-small items--wrap">
+            <a href="#" class="catalog__item">
+                <div class="catalog__item-img">
+                    <img src="img/catalog/1.png" alt="image">
+                </div>
+                <h4 class="catalog__item-title title title--category">
+                    Пружинні матраци
+                </h4>
+            </a>
+            <a href="#" class="catalog__item">
+                <div class="catalog__item-img">
+                    <img src="img/catalog/2.png" alt="image">
+                </div>
+                <h4 class="catalog__item-title title title--category">
+                    Безпружинні матраци
+                </h4>
+            </a>
+            <a href="#" class="catalog__item">
+                <div class="catalog__item-img">
+                    <img src="img/catalog/3.png" alt="image">
+                </div>
+                <h4 class="catalog__item-title title title--category">
+                    Топери, футони
+                </h4>
+            </a>
+            <a href="#" class="catalog__item">
+                <div class="catalog__item-img">
+                    <img src="img/catalog/4.png" alt="image">
+                </div>
+                <h4 class="catalog__item-title title title--category">
+                    Дитячі матраци
+                </h4>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="products" id="products">
+    <div class="container">
+        <h2 class="products__title title">Бестеллери</h2>
+    </div>
+    <div class="products__wrap items--wrap container container--big">
+        <div class="products__item" data-aos="fade-up" data-aos-delay="50">
+            <div class="products__item-img">
+                <img src="img/product/1.png" alt="product img">
+            </div>
+            <div class="products__item-header">
+                <h4 class="products__item-title">Base Amberg</h4>
+                <div class="products__item-price">5500 грн</div>
+            </div>
+            <p class="products__item-category text text--regular">
+                Пружинний
+            </p>
+            <div class="products__item-user">
+                <a href="#" class="products__item-link">Дізнатися більше</a>
+                <div class="products__item-cart">
+                    <img src="img/general/cart.svg" alt="cart">
+                </div>
+                <div class="products__item-dropdown products__dropdown">
+                    <div class="products__dropdown-wrap">
+                        <div class="products__dropdown-content">
+                            <div class="products__dropdown-title">Оберіть розмір:</div>
+                            <select name="sizes" class="products__sizes">
+                                <option value="80x190">80x190</option>
+                                <option value="80x200">80x200</option>
+                                <option value="90x190">90x190</option>
+                                <option value="90x200">90x200</option>
+                                <option value="80x190">80x190</option>
+                                <option value="80x200">80x200</option>
+                                <option value="90x190">90x190</option>
+                                <option value="90x200">90x200</option>
+                            </select>
+                        </div>
+                        <a href="#" class="products__dropdown-bttn bttn--dropdown bttn">Підтвердити</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="products__item" data-aos="fade-up" data-aos-delay="100">
+            <div class="products__item-img">
+                <img src="img/product/1.png" alt="product img">
+            </div>
+            <div class="products__item-header">
+                <h4 class="products__item-title">Brandis</h4>
+                <div class="products__item-price">5371 грн</div>
+            </div>
+            <p class="products__item-category text text--regular">
+                Пружинний
+            </p>
+            <div class="products__item-user">
+                <a href="#" class="products__item-link">Дізнатися більше</a>
+                <div class="products__item-cart">
+                    <img src="img/general/cart.svg" alt="cart">
+                </div>
+                <div class="products__item-dropdown products__dropdown">
+                    <div class="products__dropdown-wrap">
+                        <div class="products__dropdown-content">
+                            <div class="products__dropdown-title">Оберіть розмір:</div>
+                            <select name="sizes" class="products__sizes">
+                                <option value="80x190">80x190</option>
+                                <option value="80x200">80x200</option>
+                                <option value="90x190">90x190</option>
+                                <option value="90x200">90x200</option>
+                                <option value="80x190">80x190</option>
+                                <option value="80x200">80x200</option>
+                                <option value="90x190">90x190</option>
+                                <option value="90x200">90x200</option>
+                            </select>
+                        </div>
+                        <a href="#" class="products__dropdown-bttn bttn--dropdown bttn">Підтвердити</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="products__item" data-aos="fade-up" data-aos-delay="150">
+            <div class="products__item-img">
+                <img src="img/product/3.png" alt="product img">
+            </div>
+            <div class="products__item-header">
+                <h4 class="products__item-title">Lahn</h4>
+                <div class="products__item-price">5207 грн</div>
+            </div>
+            <p class="products__item-category text text--regular">
+                Пружинний
+            </p>
+            <div class="products__item-user">
+                <a href="#" class="products__item-link">Дізнатися більше</a>
+                <div class="products__item-cart">
+                    <img src="img/general/cart.svg" alt="cart">
+                </div>
+                <div class="products__item-dropdown products__dropdown">
+                    <div class="products__dropdown-wrap">
+                        <div class="products__dropdown-content">
+                            <div class="products__dropdown-title">Оберіть розмір:</div>
+                            <select name="sizes" class="products__sizes">
+                                <option value="80x190">80x190</option>
+                                <option value="80x200">80x200</option>
+                                <option value="90x190">90x190</option>
+                                <option value="90x200">90x200</option>
+                                <option value="80x190">80x190</option>
+                                <option value="80x200">80x200</option>
+                                <option value="90x190">90x190</option>
+                                <option value="90x200">90x200</option>
+                            </select>
+                        </div>
+                        <a href="#" class="products__dropdown-bttn bttn--dropdown bttn">Підтвердити</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="products__item" data-aos="fade-up" data-aos-delay="200">
+            <div class="products__item-img">
+                <img src="img/product/4.png" alt="product img">
+            </div>
+            <div class="products__item-header">
+                <h4 class="products__item-title">Bubbleflex</h4>
+                <div class="products__item-price">5500 грн</div>
+            </div>
+            <p class="products__item-category text text--regular">
+                Безпружинний
+            </p>
+            <div class="products__item-user">
+                <a href="#" class="products__item-link">Дізнатися більше</a>
+                <div class="products__item-cart">
+                    <img src="img/general/cart.svg" alt="cart">
+                </div>
+                <div class="products__item-dropdown products__dropdown">
+                    <div class="products__dropdown-wrap">
+                        <div class="products__dropdown-content">
+                            <div class="products__dropdown-title">Оберіть розмір:</div>
+                            <select name="sizes" class="products__sizes">
+                                <option value="80x190">80x190</option>
+                                <option value="80x200">80x200</option>
+                                <option value="90x190">90x190</option>
+                                <option value="90x200">90x200</option>
+                                <option value="80x190">80x190</option>
+                                <option value="80x200">80x200</option>
+                                <option value="90x190">90x190</option>
+                                <option value="90x200">90x200</option>
+                            </select>
+                        </div>
+                        <a href="#" class="products__dropdown-bttn bttn--dropdown bttn">Підтвердити</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <a href="#" class="products__bttn bttn ma mt-big">Перейти до каталогу</a>
+    </div>
+</section>
+<section class="whyus" id="whyus">
+    <div class="container">
+        <h2 class="whyus__title title">Чому саме ми?</h2>
+    </div>
+
+    <div class="container container--small">
+        <div class="whyus__wrap mt-big">
+            <div class="whyus__row ">
+                <ul class="whyus__list">
+                    <li class="whyus__list-item" data-aos="fade-up" data-aos-delay="50">
+                        <div class="whyus__list-img"><img src="img/whyus/icons/1.svg" alt="чому ми? зображення"></div>
+                        <div class="whyus__list-content">
+                            <h4 class="whyus__list-title title title--regular">Якість та різноманітність товарів</h4>
+                            <div class="whyus__list-text text">
+                                <p>Магазин "Good Sleep" пропонує широкий вибір матраців різних типів, розмірів і
+                                    жорсткості. Висока якість матеріалів та ретельне виготовлення гарантують тривалий
+                                    термін
+                                    служби та комфортний сон.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="whyus__list-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="whyus__list-img"><img src="img/whyus/icons/2.svg" alt="чому ми? зображення"></div>
+                        <div class="whyus__list-content">
+                            <h4 class="whyus__list-title title title--regular">Професійні консультації:</h4>
+                            <div class="whyus__list-text text">
+                                <p>Наші компетентні спеціалісти, які можуть надати покупцям професійну консультацію з
+                                    вибору ідеального матрацу в залежності від ваших уподобань та потреб.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="whyus__images">
+                    <div class="whyus__images-column">
+                        <img src="img/whyus/1.png" alt="whyus image" data-aos="zoom-in" data-aos-delay="50">
+                        <img src="img/whyus/2.png" alt="whyus image" data-aos="zoom-in" data-aos-delay="100">
+                    </div>
+                    <img src="img/whyus/3.png" alt="whyus image" data-aos="zoom-in" data-aos-delay="150">
+                </div>
+            </div>
+
+            <div class="whyus__row  row-reverse">
+                <ul class="whyus__list">
+                    <li class="whyus__list-item" data-aos="fade-up" data-aos-delay="50">
+                        <div class="whyus__list-img"><img src="img/whyus/icons/3.svg" alt="чому ми? зображення"></div>
+                        <div class="whyus__list-content">
+                            <h4 class="whyus__list-title title title--regular">Доставка та обслуговування:</h4>
+                            <div class="whyus__list-text text">
+                                <p>Магазин гарантує оперативну та зручну доставку матраців, а також надає якісне
+                                    обслуговування клієнтів, готове відповісти на запитання та допомогти з вирішенням
+                                    будь-яких питань.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="whyus__list-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="whyus__list-img"><img src="img/whyus/icons/4.svg" alt="чому ми? зображення"></div>
+                        <div class="whyus__list-content">
+                            <h4 class="whyus__list-title title title--regular">Антиалергенні матеріали:</h4>
+                            <div class="whyus__list-text text">
+                                <p>Ми пропонуємо матраци, створені з антиалергенних матеріалів, які запобігають появі
+                                    алергічних реакцій та допомагають забезпечити чистоту та гігієну в спальному місці.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="whyus__images">
+                    <img src="img/whyus/4.png" alt="whyus image" data-aos="zoom-in" data-aos-delay="50">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="choose" id="choose">
+    <div class="container">
+        <h2 class="choose__title title">Чому вам слід обрати ортопедичний матрас?</h2>
+        <div class="choose__wrap mt-big-2">
+            <ul class="choose__list">
+                <li class="choose__list-item" data-aos="fade-right" data-aos-delay="200">
+                    <h4 class="choose__list-title title title--regular">Анатомічна підтримка</h4>
+                    <div class="choose__list-text text">
+                        <p>
+                            Ортопедичні матраци створюють оптимальну підтримку для вашого тіла, адаптуючись до його
+                            природних контурів.
+                        </p>
+                    </div>
+                </li>
+                <li class="choose__list-item" data-aos="fade-right" data-aos-delay="250">
+                    <h4 class="choose__list-title title title--regular">Сприяння кращому сну</h4>
+                    <div class="choose__list-text text ">
+                        <p>
+                            Завдяки відмінній підтримці та розслабленню м'язів, ортопедичні матраци можуть допомогти вам
+                            отримувати глибший і спокійний сон.
+                        </p>
+                    </div>
+                </li>
+                <li class="choose__list-item" data-aos="fade-right" data-aos-delay="300">
+                    <h4 class="choose__list-title title title--regular">Тривалий термін служби</h4>
+                    <div class="choose__list-text text ">
+                        <p>
+                            Ортопедичні матраци виготовляються з якісних матеріалів, які забезпечують довгий термін
+                            служби. Це може зберегти вам витрати на постійну заміну матрацу та забезпечити стабільну
+                            підтримку протягом багатьох років.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="choose__img">
+        <img src="img/choose/1.png" alt="choose img" data-aos="fade-left" data-aos-delay="100">
+    </div>
+</section>
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact__info">
+            <h2 class="contact__title title" data-aos="fade-right" data-aos-delay="50">Не можете визначитися з матрацом?
+            </h2>
+            <div class="contact__text text mt-text" data-aos="fade-right" data-aos-delay="100">
+                <p>Наші спеціалісти готові проконсультувати вас щодо вибору розміру, матеріалу, пружин та всього, що вас
+                    цікавить, аби зробити ваш сон ідеальним ✨</p>
+            </div>
+        </div>
+        <div class="contact__form">
+            <form action="#">
+                <input type="text" placeholder="Ім’я" required data-aos="fade-up" data-aos-delay="150">
+                <input type="email" placeholder="Email" required data-aos="fade-up" data-aos-delay="200">
+                <input type="tel" placeholder="Телефон" required data-aos="fade-up" data-aos-delay="250">
+                <textarea name="text" id="textarea" cols="30" rows="10"
+                    placeholder="Коментар (Наприклад: Як мені обрати розмір?)" required data-aos="fade-up"
+                    data-aos-delay="300"></textarea>
+                <button class="bttn" data-aos="fade-up" data-aos-delay="350">Надіслати</button>
+            </form>
+        </div>
+    </div>
+    <!-- <div class="contact__img"> -->
+    <!-- <img src="img/contact/1.png" alt="contact img"> -->
+    <!-- </div> -->
+</section>
+<section class="delivery" id="delivery">
+    <div class="container">
+        <h2 class="delivery__title title">Доставка та оплата</h2>
+        <div class="delivery__wrap  items--wrap container container--small mt-big">
+            <div class="delivery__item  tac" required data-aos="fade-up" data-aos-delay="50">
+                <div class="delivery__item-img">
+                    <img src="img/delivery/1.png" alt="delivery image">
+                </div>
+                <div class="delivery__item-text text mt-text">
+                    <p>
+                        Ви можете оплатити товар повністю або замовити доставку з накладенним платежем (враховуйте, що
+                        до вартості буде додано 2% від суми товару)
+                    </p>
+                </div>
+            </div>
+            <div class="delivery__item tac" required data-aos="fade-up" data-aos-delay="100">
+                <div class="delivery__item-img">
+                    <img src="img/delivery/2.png" alt="delivery image">
+                </div>
+                <div class="delivery__item-text text mt-text">
+                    <p>
+                        Доставка здійснюється на грузове відділення Нової Пошти протягом 2-3 робочих днів.
+                    </p>
+                </div>
+            </div>
+            <div class="delivery__item tac" required data-aos="fade-up" data-aos-delay="150">
+                <div class="delivery__item-img">
+                    <img src="img/delivery/3.png" alt="delivery image">
+                </div>
+                <div class="delivery__item-text text mt-text">
+                    <p>
+                        Повернути товар ви можете протягом 14 днів, зберігши всі чеки та етикетки. Детальніше читайте у
+                        Договорі оферти. Однак, радимо перед покупкою проконсультуватися, заповнивши форму вище.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="social" id="social">
+    <div class="container container--small">
+        <div class="social__wrap ">
+            <div class="social__info info--container">
+                <h2 class="social__title title" data-aos="fade-right" data-aos-delay="50">Підписуйтесь на наш
+                    Instagram</h2>
+                <div class="social__text text mt-small" data-aos="fade-right" data-aos-delay="100">
+                    <p>
+                        Ділимось не лише новинками в асортименті, а також корисною інформацією щодо покращення якості
+                        сну та
+                        здоров’я.
+                    </p>
+                </div>
+                <a href="#" class="social__bttn bttn mt" data-aos="fade-right" data-aos-delay="150">Підписатися <img
+                        src="img/instagram/icon.svg" alt="instagram icon"></a>
+            </div>
+            <div class="social__images">
+                <div class="social__img" data-aos="zoom-in" data-aos-delay="200"><img src="img/instagram/1.png"
+                        alt="instagram img"></div>
+                <div class="social__img" data-aos="zoom-in" data-aos-delay="250"><img src="img/instagram/2.png"
+                        alt="instagram img"></div>
+                <div class="social__img mobile-none" data-aos="zoom-in" data-aos-delay="300"><img
+                        src="img/instagram/3.png" alt="instagram img"></div>
+                <div class="social__img mobile-none" data-aos="zoom-in" data-aos-delay="350"><img
+                        src="img/instagram/4.png" alt="instagram img"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</main>
+
+<footer class="footer">
+	<div class="container">
+		<a href="#" class="footer__logo">
+			<img src="img/logo.png" alt="logo">
+		</a>
+		<div class="footer__menu">
+			<ul class="footer__info footer__list">
+				<li><a href="#">Місто, Вулиця</a></li>
+				<li><a href="#">Email: mail.mail.com</a></li>
+				<li><a href="#">Телефон: 380 00 000 00 00 </a></li>
+			</ul>
+			<ul class="footer__menu-list footer__list">
+				<li><a href="#">Політика конфіденційності</a></li>
+				<li><a href="#">Договір оферти</a></li>
+			</ul>
+		</div>
+		<div class="footer__decor decor-1"><img src="img/decor/footer/1.png" alt="decor img"></div>
+		<div class="footer__decor decor-2"><img src="img/decor/footer/2.png" alt="decor img"></div>
+		<div class="footer__decor decor-3"><img src="img/decor/footer/3.png" alt="decor img"></div>
+	</div>
+</footer>
+
+<div class="popup-bg">
+	<div class="popup" id="popup-example">
+		<div class="popup__close">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15.996" viewBox="0 0 16 15.996">
+				<path id="Icon_ionic-ios-close" data-name="Icon ionic-ios-close" d="M21.181,19.287,26.9,13.572A1.339,1.339,0,1,0,25,11.678l-5.715,5.715-5.715-5.715a1.339,1.339,0,1,0-1.894,1.894l5.715,5.715L11.679,25a1.339,1.339,0,0,0,1.894,1.894l5.715-5.715L25,26.895A1.339,1.339,0,0,0,26.9,25Z" transform="translate(-11.285 -11.289)"/>
+			</svg>
+		</div>
+
+		<div class="popup__wrap">
+			<h2 class="popup__title">Заголовок попап окна</h2>
+			<div class="popup__descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita est doloremque temporibus dolorem adipisci, quibusdam in ipsum officia qui perferendis, rem quas? Reprehenderit labore facere ab quo exercitationem soluta maiores.</div>
+
+			<button class="popup__bttn bttn popup__bttn-close">Закрыть</button>
+		</div>
+	</div>
+
+	<div class="popup popup--thanks" id="popup-thanks">
+		<div class="popup__close">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15.996" viewBox="0 0 16 15.996">
+				<path id="Icon_ionic-ios-close" data-name="Icon ionic-ios-close" d="M21.181,19.287,26.9,13.572A1.339,1.339,0,1,0,25,11.678l-5.715,5.715-5.715-5.715a1.339,1.339,0,1,0-1.894,1.894l5.715,5.715L11.679,25a1.339,1.339,0,0,0,1.894,1.894l5.715-5.715L25,26.895A1.339,1.339,0,0,0,26.9,25Z" transform="translate(-11.285 -11.289)"/>
+			</svg>
+		</div>
+
+		<div class="popup__wrap">
+			<h2 class="popup__title">Успешная отправка формы</h2>
+			<div class="popup__descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita est doloremque temporibus dolorem adipisci, quibusdam in ipsum officia qui perferendis, rem quas? Reprehenderit labore facere ab quo exercitationem soluta maiores.</div>
+
+			<button class="popup__bttn bttn popup__bttn-close">Закрыть</button>
+		</div>
+	</div>
+</div>
+
+<script src="js/libs/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+	integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="js/libs/swiper-bundle.min.js"></script>
+<script type="module" src="js/app.js"></script>
+<!-- <script src="js/modules/popup.js"></script> -->
+
+</body>
+
+</html>
