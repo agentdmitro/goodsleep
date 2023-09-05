@@ -38,10 +38,13 @@
   display: block;
   width: 1.6rem;
   height: 0.9rem;
-  background-image: url(../img/general/arrow.svg);
+  background-color: #747F85;
+  mask-image: url(../img/general/arrow.svg);
+  -webkit-mask-image: url(../img/general/arrow.svg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  transition: all 0.2s ease;
 }
 .select2-selection__arrow b {
   display: none;
@@ -59,11 +62,16 @@
   background: #F1F1F1;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  padding: 0 0.5rem;
+  padding-right: 0.5rem;
+  overflow: hidden;
 }
 .select2-container--open .select2-selection {
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
+}
+
+.select2-results__option {
+  transition: all 0.2s ease;
 }
 
 .select2-results__option {
@@ -75,8 +83,13 @@
 }
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
-  background-color: #F1F1F1;
-  color: #747F85;
+  background-color: #008DD2;
+  color: #fff;
+}
+
+.select2-container--open .select2-selection__arrow::after {
+  background-color: #414547;
+  transform: rotate(180deg);
 }
 
 .select2-container--open .select2-dropdown--above {

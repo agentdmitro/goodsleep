@@ -288,6 +288,13 @@ main {
     flex: 1;
   }
 }
+.cart svg, .cart path {
+  transition: all 0.2s ease;
+}
+.cart:hover path {
+  fill: #0576ad;
+}
+
 h1,
 h2,
 h3,
@@ -452,7 +459,7 @@ form label {
 
 input,
 textarea {
-  background-color: #fff;
+  background: #fff;
   border: none;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
@@ -461,6 +468,8 @@ textarea {
   color: #747F85;
   font-weight: 500;
   font-family: inherit;
+  transition: all 0.2s ease;
+  width: 100%;
 }
 input::placeholder,
 textarea::placeholder {
@@ -468,6 +477,20 @@ textarea::placeholder {
   font-size: 1.8rem;
   color: #747F85;
   opacity: 1;
+}
+input:hover,
+textarea:hover {
+  background: #f4f4f4;
+}
+input:focus,
+textarea:focus {
+  background: #f4f4f4;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.01);
+}
+
+label {
+  width: 100%;
 }
 
 textarea {
@@ -494,6 +517,18 @@ textarea {
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
+  transition: all 0.2s ease;
+}
+.bttn:hover {
+  background: #0576ad;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.bttn:active {
+  transition: all 0.2s ease;
+  transform: scale(0.9) !important;
+}
+.bttn:focus {
+  background: #0b648f;
 }
 @media only screen and (max-width: 576px) {
   .bttn {
@@ -686,12 +721,30 @@ textarea {
   padding: 1rem;
   font-weight: 500;
   font-size: 1.8rem;
+  transition: all 0.2s ease;
 }
 @media only screen and (max-width: 768px) {
   .header__menu-list li a {
     font-size: 2.2rem;
     padding: 2rem;
   }
+}
+.header__menu-list li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0rem;
+  height: 2px;
+  width: 0;
+  background-color: #008DD2;
+  transition: all 0.2s ease;
+}
+.header__menu-list li a:hover {
+  color: #008DD2;
+}
+.header__menu-list li a:hover::after {
+  width: 100%;
 }
 .header__menu-list li:not(:first-of-type) {
   border-top: 0.1rem solid rgba(114, 117, 152, 0.2);
@@ -864,15 +917,25 @@ textarea {
   gap: 3rem;
   margin-top: 1.4rem;
 }
+.products__item {
+  transition: all 0.2s ease;
+}
+.products__item:hover .products__item-img img {
+  transform: scale(1.1);
+}
 .products__item-img {
   max-height: 30rem;
   width: 100%;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 .products__item-img img {
   max-width: 100%;
   width: 100%;
   object-fit: cover;
   height: auto;
+  transition: all 0.2s ease;
 }
 .products__item-header {
   margin-top: 4.6rem;
@@ -934,6 +997,23 @@ textarea {
   background-position: center;
   top: -1.8rem;
   right: 3rem;
+}
+.products__dropdown-bttn::after {
+  content: "";
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+.products__dropdown-bttn:hover {
+  background: initial;
+}
+.products__dropdown-bttn:hover::after {
+  width: 70%;
 }
 .products__dropdown-title {
   font-weight: bold;
@@ -1076,7 +1156,7 @@ textarea {
 }
 
 .choose {
-  overflow: visible;
+  overflow: hidden;
   padding-bottom: 12rem;
   max-width: 192rem;
   margin: 0 auto;
@@ -1313,6 +1393,11 @@ textarea {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  transition: all 0.2s ease;
+}
+.footer__logo:hover {
+  background-color: #f4f4f4;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 .footer__logo img {
   width: 11.5rem;
@@ -1349,11 +1434,26 @@ textarea {
 .footer__list li a {
   font-size: 1.6rem;
   font-weight: 400;
+  transition: all 0.2s ease;
 }
 @media only screen and (max-width: 576px) {
   .footer__list li a {
     font-size: 1.8rem;
   }
+}
+.footer__list li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -0.4rem;
+  height: 1px;
+  width: 0;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+.footer__list li a:hover::after {
+  width: 100%;
 }
 .footer__list li + li {
   margin-top: 2rem;
@@ -1420,10 +1520,13 @@ textarea {
   display: block;
   width: 1.6rem;
   height: 0.9rem;
-  background-image: url(../img/general/arrow.svg);
+  background-color: #747F85;
+  mask-image: url(../img/general/arrow.svg);
+  -webkit-mask-image: url(../img/general/arrow.svg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  transition: all 0.2s ease;
 }
 .select2-selection__arrow b {
   display: none;
@@ -1441,11 +1544,16 @@ textarea {
   background: #F1F1F1;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  padding: 0 0.5rem;
+  padding-right: 0.5rem;
+  overflow: hidden;
 }
 .select2-container--open .select2-selection {
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
+}
+
+.select2-results__option {
+  transition: all 0.2s ease;
 }
 
 .select2-results__option {
@@ -1457,8 +1565,13 @@ textarea {
 }
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
-  background-color: #F1F1F1;
-  color: #747F85;
+  background-color: #008DD2;
+  color: #fff;
+}
+
+.select2-container--open .select2-selection__arrow::after {
+  background-color: #414547;
+  transform: rotate(180deg);
 }
 
 .select2-container--open .select2-dropdown--above {

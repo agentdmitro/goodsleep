@@ -159,12 +159,30 @@
   padding: 1rem;
   font-weight: 500;
   font-size: 1.8rem;
+  transition: all 0.2s ease;
 }
 @media only screen and (max-width: 768px) {
   .header__menu-list li a {
     font-size: 2.2rem;
     padding: 2rem;
   }
+}
+.header__menu-list li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0rem;
+  height: 2px;
+  width: 0;
+  background-color: #008DD2;
+  transition: all 0.2s ease;
+}
+.header__menu-list li a:hover {
+  color: #008DD2;
+}
+.header__menu-list li a:hover::after {
+  width: 100%;
 }
 .header__menu-list li:not(:first-of-type) {
   border-top: 0.1rem solid rgba(114, 117, 152, 0.2);
